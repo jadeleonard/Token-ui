@@ -15,9 +15,48 @@ interface ButtonProps {
 
 // Styled button component
 const StyledButton = styled.button<ButtonProps>`
-  /* Define your button styles here */
-`;
+    background: black;
+        border-radius: 5px;
+        padding: 10px 14px;
+        transition: 0.5s;
+        color: white;
 
+
+
+        border: none; 
+        &:hover{
+        background: #302f2f;
+        box-shadow: 1px 2px 2px rgba(1, 1, 1, 1);
+        }
+        & .secondary {
+         background: white;
+    border-radius: 5px;
+    padding: 10px 14px;
+    transition: 0.5s;
+    color:black;
+    cursor: pointer;
+
+
+
+    border: none;
+    &:hover{
+        
+    }
+    }
+    & .link {
+     background: transparent;
+    border-radius: 5px;
+    padding: 10px 14px;
+    transition: 0.5s;
+    color:black;
+    text-decoration: underline;
+    cursor: pointer;
+
+
+    border: none;
+    }
+
+    `;
 // Functional component
 const Button: React.FC<ButtonProps> = ({ id, className, primary, secondary, link, onClick, children }) => {
   const buttonClass = clsx(className, {
