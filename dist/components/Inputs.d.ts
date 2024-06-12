@@ -1,8 +1,9 @@
 import React from 'react';
-declare const Input: ({ id, type, className, placeholder }: {
-    id: any;
-    type: any;
-    className: any;
-    placeholder: any;
-}) => React.FunctionComponentElement<import("styled-components").FastOmit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, never>>;
-export { Input };
+interface InputProps {
+    id: string;
+    type: string;
+    className?: string;
+    placeholder?: string;
+}
+declare const Input: React.FC<InputProps>;
+export default Input;

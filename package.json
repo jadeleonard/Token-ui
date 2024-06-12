@@ -1,6 +1,6 @@
 {
   "name": "greentoolsdesign",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React library for your easy needs. Using css Style components",
   "main": "./dist/index.ts",
   
