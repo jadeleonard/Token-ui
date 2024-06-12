@@ -1,0 +1,30 @@
+{
+  "name": "greentoolsdesign",
+  "version": "1.0.0",
+  "description": "A React library for your easy needs. Using css Style components",
+  "main": "./dist/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "library",
+    "react",
+    "components",
+    "css",
+    "styles"
+  ],
+  "author": "webdevtools",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@types/react": "^18.3.3",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.34"
+  }
+}
