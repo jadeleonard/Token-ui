@@ -1,11 +1,13 @@
 {
   "name": "greentoolsdesign",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React library for your easy needs. Using css Style components",
   "main": "./dist/index.ts",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
   "keywords": [
     "npm",
     "library",
