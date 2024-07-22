@@ -1,13 +1,11 @@
 {
   "name": "token-ui",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A React library for your easy needs. Using css Style components",
   "main": "./dist/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
-
-     "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [
     "npm",
@@ -24,6 +22,7 @@
     "@emotion/styled": "^11.11.5",
     "@types/react": "^18.3.3",
     "clsx": "^2.1.1",
+    "path": "^0.12.7",
     "react": "^18.3.1",
     "styled-components": "^6.1.11"
   },
