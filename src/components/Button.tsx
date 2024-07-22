@@ -1,75 +1,41 @@
-import React from 'react';
-import clsx from 'clsx';
-import styled from 'styled-components';
-
-// Define types for props
 interface ButtonProps {
-  id: string;
-  className?: string; // className is optional
-  primary?: boolean;
-  secondary?: boolean;
-  link?: boolean;
-  onClick?: () => void;
-  children: React.ReactNode;
+  autofocus?: boolean;
+  disabled?: boolean;
+  form?: string;
+  formaction?: string;
+  formenctype?: "application/x-www-form-urlencoded" | "multipart/form-data" | "text/plain";
+  formmethod?: "get" | "post";
+  formnovalidate?: boolean;
+  formtarget?: "_self" | "_blank" | "_parent" | "_top" | string;
+  name?: string;
+  type?: "button" | "submit" | "reset";
+  value?: string;
+  class?: string;
+  id?: string;
+  style?: string;
+  title?: string;
+  data?: { [key: string]: string };
 }
 
-// Styled button component
-const StyledButton = styled.button<ButtonProps>`
-    background: black;
-        border-radius: 5px;
-        padding: 10px 14px;
-        transition: 0.5s;
-        color: white;
+const Button = (props: ButtonProps):HTMLButtonElement => {
+  const button = document.createElement('button') as HTMLButtonElement;
+
+  if (props.class) button.className = props.class;
+  if (props.id) button.id = props.id;
+  if (props.name) button.name = props.name;
+  if (props.title) button.title = props.title;
+  if (props.formnovalidate) button.formNoValidate = props.formnovalidate;
+  if (props.formaction) button.formAction = props.formaction;
+  if (props.formtarget) button.formTarget = props.formtarget;
+  if (props.style) button.style.cssText = props.style;
+  if (props.autofocus) button.autofocus = props.autofocus;
+  if (props.disabled) button.disabled = props.disabled;
+  if (props.type) button.type = props.type;
+  if (props.value) button.value = props.value;
 
 
-
-        border: none; 
-        &:hover{
-        background: #302f2f;
-        box-shadow: 1px 2px 2px rgba(1, 1, 1, 1);
-        }
-        & .secondary {
-         background: white;
-    border-radius: 5px;
-    padding: 10px 14px;
-    transition: 0.5s;
-    color:black;
-    cursor: pointer;
-
-
-
-    border: none;
-    &:hover{
-        
-    }
-    }
-    & .link {
-     background: transparent;
-    border-radius: 5px;
-    padding: 10px 14px;
-    transition: 0.5s;
-    color:black;
-    text-decoration: underline;
-    cursor: pointer;
-
-
-    border: none;
-    }
-
-    `;
-// Functional component
-const Button: React.FC<ButtonProps> = ({ id, className, primary, secondary, link, onClick, children }) => {
-  const buttonClass = clsx(className, {
-    'primary': primary,
-    'secondary': secondary,
-    'link': link
-  });
-
-  return (
-    <StyledButton className={buttonClass} onClick={onClick} id={id}>
-      {children}
-    </StyledButton>
-  );
+  return button
 };
 
-export default Button;
+
+export default Button
