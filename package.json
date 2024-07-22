@@ -1,6 +1,6 @@
 {
-  "name": "greentoolsdesign",
-  "version": "1.0.6",
+  "name": "token-ui",
+  "version": "1.0.10",
   "description": "A React library for your easy needs. Using css Style components",
   "main": "./dist/index.ts",
   "scripts": {
